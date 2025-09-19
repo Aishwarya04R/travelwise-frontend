@@ -1,0 +1,39 @@
+.local-info-widget {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.generate-tips-prompt {
+  text-align: center;
+}
+
+.generate-tips-prompt h3 {
+    margin-top: 0;
+}
+
+.generate-btn {
+    background: #28a745;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.generate-btn:hover {
+    background: #218838;
+}
+
+.tips-content {
+    line-height: 1.6;
+}
+
+.tips-content strong {
+    color: #0056b3;
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+

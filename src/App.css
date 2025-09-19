@@ -1,38 +1,133 @@
-.App {
+/* Main App Layout */
+.form-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; /* Use min-height to handle different form sizes */
+  background-color: #f0f2f5;
+  padding: 2rem 0;
+}
+
+/* Form Styling (Login, Register, etc.) */
+.login-container, .register-container, .booking-container {
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: white;
+  width: 100%;
+  max-width: 400px; /* Use max-width for responsiveness */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Packages & Hotels List Styling */
+.packages-container {
+  width: 80%;
+  margin: 2rem auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.package-card-link {
+  text-decoration: none;
+  color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.package-card {
+  background: white;
+  padding: 0;
+  padding-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.package-card:hover {
+  transform: translateY(-5px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.package-image {
+  width: 100%;
+  height: 200px; /* This sets a fixed height for the image container */
+  object-fit: cover; /* This makes the image cover the area without distortion */
+  border-radius: 8px 8px 0 0;
+}
+
+.package-info {
+  padding: 0 1.5rem;
+}
+
+.admin-actions {
+    padding: 0 1.5rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+.btn-delete {
+    background-color: #dc3545;
+    padding: 0.5rem 1rem;
+}
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #212529;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px; /* Match button font size */
+    line-height: 1.5; /* Match button line height */
+}
+.btn-edit:hover {
+    background-color: #e0a800;
 }

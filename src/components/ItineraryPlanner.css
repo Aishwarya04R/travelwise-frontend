@@ -1,0 +1,100 @@
+.itinerary-planner-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.planner-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.planner-header h1 {
+  font-size: 2.5rem;
+}
+
+.planner-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.planner-form input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.planner-form input[type="number"] {
+  max-width: 100px;
+}
+
+.planner-form button {
+  width: auto;
+  padding: 0.75rem 1.5rem;
+}
+
+.error-message {
+  text-align: center;
+  color: #dc3545;
+}
+
+.itinerary-results h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 4px;
+  background: #e9ecef;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 50px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #007bff;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 3px #007bff;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.itinerary-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+}

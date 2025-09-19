@@ -1,0 +1,140 @@
+.home-page {
+  /* No specific styles needed for the main container */
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://th.bing.com/th/id/R.1c1b8c8219385a0f88a7b6cfcba712ab?rik=u9ceuWoncAl0iQ&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f08%2fFree-Desktop-Travel-Backgrounds.jpg&ehk=i2gnQlVtAUHLdjoM%2b5hVl%2bStT4ogWTYySuRp0cXXPnc%3d&risl=&pid=ImgRaw&r=0');
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.hero-button {
+  padding: 0.8rem 2rem;
+  background-color: #007bff;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.hero-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* --- SHARED SECTION STYLES --- */
+.featured-section, .why-us-section, .cta-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
+/* --- FEATURED PACKAGES --- */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.featured-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.featured-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featured-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.featured-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.featured-card-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.featured-card-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* --- WHY CHOOSE US --- */
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.why-us-item {
+  padding: 2rem;
+}
+
+.why-us-item svg {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.why-us-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* --- FINAL CTA --- */
+.cta-section {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}

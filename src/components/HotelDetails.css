@@ -1,0 +1,53 @@
+/* Main container for the hotel details layout */
+.hotel-details-layout {
+  max-width: 1120px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 3rem;
+}
+
+/* Main content area (left side) */
+.hotel-main-content { }
+
+/* Sidebar area (right side) */
+.hotel-sidebar { }
+
+.hotel-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hotel-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0;
+}
+
+.hotel-image-full {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 2.5rem 0;
+}
+
+.details-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 992px) {
+  .hotel-details-layout {
+    grid-template-columns: 1fr;
+  }
+}

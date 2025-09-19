@@ -1,0 +1,51 @@
+.my-bookings-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.booking-section {
+    margin-top: 2.5rem;
+}
+
+.booking-section h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.booking-list-enhanced {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.booking-card-enhanced {
+  display: flex;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.booking-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.booking-info {
+  padding: 1rem 1.5rem;
+}
+
+.booking-info h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.booking-info p {
+  margin: 0.25rem 0;
+  color: #555;
+}

@@ -1,0 +1,43 @@
+.booking-widget {
+  position: sticky; /* This is the key to the sticky behavior */
+  top: 100px; /* Distance from the top of the viewport */
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  border: 1px solid #ddd;
+}
+
+.price-section {
+  margin-bottom: 1.5rem;
+}
+
+.price-amount {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.price-label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.book-now-btn-widget {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(45deg, #e60023, #b8001c); /* A more modern button color */
+  color: white !important;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.book-now-btn-widget:hover {
+  transform: scale(1.03);
+}

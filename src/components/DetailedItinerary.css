@@ -1,0 +1,17 @@
+.detailed-itinerary h3 {
+  margin-bottom: 1.5rem;
+}
+
+.itinerary-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.itinerary-day {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.itinerary-day:last-child {
+  border-bottom: none;
+}
