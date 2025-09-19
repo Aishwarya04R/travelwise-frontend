@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import api from '../api';
 import './MyBookings.css';
-import Spinner from './Spinner';
 import LoyaltyDashboard from './LoyaltyDashboard';
+// The unused 'Spinner' import has been removed
 
 function MyBookings() {
   const [packageBookings, setPackageBookings] = useState([]);
@@ -31,10 +31,8 @@ function MyBookings() {
 
   return (
     <div className="my-bookings-container">
-      <h2>My Bookings</h2>
-
-       <LoyaltyDashboard />
-
+      <h2>My Dashboard</h2>
+      <LoyaltyDashboard />
       <div className="booking-section">
         <h3>Package Bookings</h3>
         {packageBookings.length > 0 ? (
@@ -54,7 +52,6 @@ function MyBookings() {
           <p>You have no package bookings.</p>
         )}
       </div>
-
       <div className="booking-section">
         <h3>Hotel Bookings</h3>
         {hotelBookings.length > 0 ? (

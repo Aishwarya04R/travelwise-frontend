@@ -1,5 +1,6 @@
 import './App.css';
-import { Routes, Route, Navigate } from 'react-router-dom';
+// 'Navigate' has been removed from this import line
+import { Routes, Route } from 'react-router-dom'; 
 import Header from './components/Header';
 import Home from './components/Home';
 import Register from './components/Register';
@@ -14,28 +15,25 @@ import MyBookings from './components/MyBookings';
 import Hotels from './components/Hotels';
 import HotelDetails from './components/HotelDetails';
 import EditHotel from './components/EditHotel';
-import HotelBooking from './components/HotelBooking';
+// 'HotelBooking' has been removed as it was replaced by CheckoutPage
 import AdminDashboard from './components/AdminDashboard';
 import CheckoutPage from './components/CheckoutPage';
 import ItineraryPlanner from './components/ItineraryPlanner';
+import DreamCatcher from './components/DreamCatcher';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
-import { useAuth } from './context/AuthContext'; // <-- 1. IMPORT THIS
-import SOSButton from './components/SOSButton';   // <-- 2. IMPORT THIS
-import DreamCatcher from './components/DreamCatcher';
-
+import { useAuth } from './context/AuthContext';
+import SOSButton from './components/SOSButton';
 
 function App() {
-  const { user } = useAuth(); // <-- 3. GET THE CURRENT USER
+  const { user } = useAuth();
 
   return (
     <div>
       <Header />
-      {/* Conditionally render the SOS button only if the user is logged in */}
-      {user && <SOSButton />} 
+      {user && <SOSButton />}
       <main>
         <Routes>
-          {/* ... (all your existing routes) ... */}
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<div className="form-page-container"><Register /></div>} />
           <Route path="/login" element={<div className="form-page-container"><Login /></div>} />
