@@ -1,43 +1,42 @@
 import React, { useState } from 'react';
-import api from '../api'; 
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import api from '../api';
+import { useToast } from '../context/ToastContext';
+import api from '../api'; // There is now only ONE import for 'api'
+import axios from 'axios'; // We still need the original axios for the login call
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const { login } = useAuth();
+  const { addToast } = useToast();
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const userData = {
-      username: username,
-      password: password,
-    };
+    const userData = { username, password };
+    
     try {
-      // Step 1: Log in using the standard axios instance to get the token
-      const response = await api.post('/users/login', userData);
+      // Use the standard axios for login to get the token
+      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/users/login`, userData);
       const { jwt } = response.data;
 
-      // Step 2: IMPORTANT - Save the new token to localStorage FIRST
+      // Save the token FIRST
       localStorage.setItem('token', jwt);
 
-      // Step 3: Now, use our custom 'api' instance to fetch the user's profile.
-      // It will automatically add the new token from localStorage to its headers.
+      // Now fetch the user's profile using our authenticated 'api' instance
       const userResponse = await api.get('/users/profile');
 
-      // Step 4: Save the user data and token in our application's state
+      // Save user data in our context
       login(userResponse.data, jwt);
       
+      addToast('Login successful!', 'success');
       navigate('/my-bookings');
 
     } catch (error) {
       console.error('Login failed:', error);
-      // It's better to show a more specific error from the server if it exists
       const errorMessage = error.response?.data?.message || "Please check your credentials.";
-      alert(`Login failed: ${errorMessage}`);
+      addToast(`Login failed: ${errorMessage}`, 'error');
     }
   };
 
@@ -47,21 +46,11 @@ function Login() {
         <h2>Login</h2>
         <div className="form-group">
           <label>Username</label>
-          <input
-            type="text"
-            placeholder="Enter username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+          <input type="text" placeholder="Enter username" value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
         <div className="form-group">
           <label>Password</label>
-          <input
-            type="password"
-            placeholder="Enter password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <input type="password" placeholder="Enter password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
         <button type="submit">Login</button>
         <p className="form-link">
@@ -76,4 +65,3 @@ function Login() {
 }
 
 export default Login;
-
